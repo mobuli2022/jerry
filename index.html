@@ -25,11 +25,11 @@
   // });
     var clipboard=new Clipboard('#copy_btn');
     clipboard.on('success',function(e){
-      alert("複製微信ID成功 打開微信搜索處黏貼加好友!!!",1500);
+      // alert("複製微信ID成功 打開微信搜索處黏貼加好友!!!",1500);
       // window.location.href='weixin://';
-      window.location.href= 'weixin://dl/publicaccount?username=gh_3c884a3615f3';
-      // e.clearSelection();
-      // console.log(e.clearSelection);
+      window.location.href= 'weixin://dl/publicaccount?username=gh_8d025901150ab';
+      e.clearSelection();
+      console.log(e.clearSelection);
     });
   });
   // var myImage = document.getElementById('pic');

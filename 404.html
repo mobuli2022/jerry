@@ -1,0 +1,51 @@
+<!DOCTYPE html><html lang="en"><head>
+  <meta charset="utf-8">
+  <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.3/jquery.js"></script>
+  <script src="https://cdn.jsdelivr.net/clipboard.js/1.5.12/clipboard.min.js"></script>
+  <title>Mobuli</title>
+  <base href="/mobuli/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="stylesheet" href="styles.ef46db3751d8e999.css"></head>
+<body>
+  <!-- <app-root></app-root> -->
+  
+  <button class="btn" data-clipboard-action="copy" data-clipboard-target="#target" id="copy_btn" style="background-image:url(./assets/cat.png);background-size:100% 100%;background-repeat: repeat;width:100%;height:360px;font-size: 2rem;">點擊圖片打開微信<br>微信搜索處黏貼加好友</button>
+  <span id="target" style="color: white;">LZQ75888</span>  
+  <!-- style="background-image:url(./assets/cat.png);width:30px;height:30px;" -->
+  <!-- <img id="pic" src="./assets/cat.png" alt="點擊圖片打開微信搜索處黏貼即可"/> -->
+<script src="runtime.780e9a58553452b8.js" type="module"></script><script src="polyfills.08dcc9b9700897ad.js" type="module"></script><script src="main.6b995eed995a13f2.js" type="module"></script>
+<script>  
+  $(document).ready(function(){
+  //   $('#pic').on('touchstart', function(evt) {
+  //   var e = event || evt;
+  //   $('#copy_btn').click();
+  //   e.clearSelection();
+  //    console.log(e.clearSelection);
+  // });
+    var clipboard=new Clipboard('#copy_btn');
+    clipboard.on('success',function(e){
+      alert("複製微信ID成功 打開微信搜索處黏貼加好友!!!",1500);
+      window.location.href='weixin://';
+      e.clearSelection();
+      console.log(e.clearSelection);
+    });
+  });
+  // var myImage = document.getElementById('pic');
+  //   myImage.onclick = function() {
+  //   $('#copy_btn').click();
+  // }
+
+
+  // var myImage = document.getElementById('pic');
+  // $('#pic').on('touchstart', function(evt) {
+  //   var e = event || evt;
+  //   $('#copy_btn').click();
+  //   e.clearSelection();
+  //    console.log(e.clearSelection);
+  // });
+    
+
+</script>
+
+</body></html>
